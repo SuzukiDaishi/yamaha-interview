@@ -1,15 +1,18 @@
 <template>
-    <div>
-        <!-- TODO: ここから -->
+    <div class="page">
+        <slot />
     </div>
 </template>
 
 <script>
     export default {
-        
+        name: 'BaseSlidePage'
     }
 </script>
 
-<style lang="scss" scoped>
-
+<style>
+.page {
+    width: 100vw;
+    height: 100vh;
+}
 </style>
