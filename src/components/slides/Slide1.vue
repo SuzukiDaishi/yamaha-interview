@@ -1,45 +1,31 @@
 <template>
-  <BaseSlidePage class="bg-color">
-    <div class="center-outer">
-      <div class="center-inner">
-        <h1 class="title">YAMAHA最終面接<br />〜 自己PR 〜</h1>
-      </div>
-    </div>
-  </BaseSlidePage>
+  <BaseSlideCenter class="slide1__bg-color">
+    <h1 class="slide1__title">YAMAHA最終面接<br />〜 自己PR 〜</h1>
+  </BaseSlideCenter>
 </template>
 
 <script>
-import BaseSlidePage from '../BaseSlidePage.vue'
+import BaseSlideCenter from '../BaseSlideCenter.vue'
+import gsap from 'gsap'
 
 export default {
   name: 'Slide1',
   components: {
-    BaseSlidePage
+    BaseSlideCenter
   },
   mounted() {
+    gsap.from('.slide1__title', {duration: 2.5, ease: 'bounce.out', opacity: 0, y: -300})
   },
 }
 </script>
 
 <style scoped>
-.center-outer {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-}
-.center-inner {
-  position: absolute;
-  text-align: center;
-  top: 50%;
-  left: 50%;
-  transform: translateY(-50%) translateX(-50%);
-}
-.title {
-  font-size: 8vh;
+.slide1__title {
+  font-size: 6vw;
   color: aliceblue;
   text-shadow: 1px 0px 5px rgba(0,0,0,0.3);
 }
-.bg-color {
+.slide1__bg-color {
   background: linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
 }
 </style>
