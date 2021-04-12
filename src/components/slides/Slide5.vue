@@ -5,6 +5,11 @@
         </div>
         <div class="slide5__img-wrapper">
             <img src="/yamaha-interview/images/vc.png" class="slide5__img" />
+            <div>
+                <audio class="slide5__audio" src="/yamaha-interview/waves/sound_1.wav" controls />
+                <audio class="slide5__audio" src="/yamaha-interview/waves/sound_2.wav" controls />
+                <audio class="slide5__audio" src="/yamaha-interview/waves/sound_3.wav" controls />
+            </div>
         </div>
     </BaseSlidePage>
 </template>
@@ -41,5 +46,8 @@ export default {
 }
 .slide5__img {
     width: 80vw;
+}
+.slide5__audio {
+    margin: 0 20px;
 }
 </style>

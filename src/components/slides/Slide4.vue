@@ -28,7 +28,7 @@ export default {
             {
                 title: 'Tourism Project',
                 doc: '湯涌町の観光客誘致のためにFlutterによるアプリ開発行う。 現在、自分は当プロジェクトの技術責任者をしています。',
-                img: '/yamaha-interview/images/アプリ.png'
+                img: '/yamaha-interview/images/app.png'
             },
             {
                 title: 'ホロVRM',
@@ -48,7 +48,7 @@ export default {
             {
                 title: 'ホームページ倶楽部',
                 doc: '友人の誘いで始めたプロジェクト。Wordpressのテーマの作成を行った。',
-                img: '/yamaha-interview/images/のびるらぼ.png'
+                img: '/yamaha-interview/images/nobirurabo.png'
             },
             {
                 title: 'Android演習',
