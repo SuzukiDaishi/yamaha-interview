@@ -25,7 +25,7 @@
                 </li>
             </ul>
         </div>
-        <img src='./images/アイコン.png' class="slide6__img" >
+        <img src='/images/アイコン.png' class="slide6__img" >
     </BaseSlidePage>
 </template>
 
