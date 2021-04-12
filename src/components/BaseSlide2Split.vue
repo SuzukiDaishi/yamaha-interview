@@ -39,7 +39,7 @@ export default {
 }
 .sp2__photo {
   width: 50%;
-  background-image: url('/images/IMG_0376.JPG');
+  background-image: url('./images/IMG_0376.JPG');
   background-size: cover;
 }
 .sp2__text {
