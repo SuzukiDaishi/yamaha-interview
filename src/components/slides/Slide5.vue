@@ -1,7 +1,7 @@
 <template>
     <BaseSlidePage class="slide5__content">
         <div class="slide5__title-wrapper">
-            <h2 class="slide5__title">深層変換モデルによる性質変換</h2>
+            <h2 class="slide5__title">深層生成モデルによる声質変換</h2>
         </div>
         <div class="slide5__img-wrapper">
             <img src="/images/vc.png" class="slide5__img" />

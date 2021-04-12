@@ -9,7 +9,7 @@
 <script>
 import BaseSlideCenter from '../BaseSlideCenter.vue'
 export default {
-  name: 'Slide8',
+  name: 'Slide9',
   components: {
     BaseSlideCenter,
   },

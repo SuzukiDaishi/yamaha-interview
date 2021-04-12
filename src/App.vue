@@ -28,6 +28,7 @@ import Slide9 from './components/slides/Slide9'
 
 export default {
   name: 'App',
+  
   components: {
     VueScrollSnap,
     Slide1,

@@ -20,6 +20,9 @@
                     <li>生成モデル</li>
                     <li>音声</li>
                 </ul>
+                <li>
+                    etc...
+                </li>
             </ul>
         </div>
         <img src='/images/アイコン.png' class="slide6__img" >
