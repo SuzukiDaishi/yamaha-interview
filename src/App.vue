@@ -5,6 +5,11 @@
       <Slide2 class="item" :addEventScroll="addEventScroll" :removeEventScroll="removeEventScroll"/>
       <Slide3 class="item" />
       <Slide4 class="item"/>
+      <Slide5 class="item"/>
+      <Slide6 class="item"/>
+      <Slide7 class="item"/>
+      <Slide8 class="item"/>
+      <Slide9 class="item"/>
     </vue-scroll-snap>
   </div>
 </template>
@@ -15,7 +20,11 @@ import Slide1 from './components/slides/Slide1'
 import Slide2 from './components/slides/Slide2'
 import Slide3 from './components/slides/Slide3'
 import Slide4 from './components/slides/Slide4'
-
+import Slide5 from './components/slides/Slide5'
+import Slide6 from './components/slides/Slide6'
+import Slide7 from './components/slides/Slide7'
+import Slide8 from './components/slides/Slide8'
+import Slide9 from './components/slides/Slide9'
 
 export default {
   name: 'App',
@@ -25,6 +34,11 @@ export default {
     Slide2,
     Slide3,
     Slide4,
+    Slide5,
+    Slide6,
+    Slide7,
+    Slide8,
+    Slide9,
   },
   data() {
     return {
