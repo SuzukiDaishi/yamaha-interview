@@ -4,7 +4,7 @@
             <h2 class="slide5__title">深層生成モデルによる声質変換</h2>
         </div>
         <div class="slide5__img-wrapper">
-            <img src="/images/vc.png" class="slide5__img" />
+            <img src="/yamaha-interview/images/vc.png" class="slide5__img" />
         </div>
     </BaseSlidePage>
 </template>

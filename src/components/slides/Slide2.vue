@@ -1,5 +1,5 @@
 <template>
-  <BaseSlide2Split id='slide2' rightImageUrl="/images/IMG_0376.JPG">
+  <BaseSlide2Split id='slide2' rightImageUrl="/yamaha-interview/images/IMG_0376.JPG">
     <div class="slide2__container">
       <div class="slide2__contentbox slide2__fadein1">
         <h2 class="slide2__h2 slide2__nomp">
