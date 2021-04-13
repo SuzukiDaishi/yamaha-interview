@@ -1,7 +1,7 @@
 <template>
     <BaseSlidePage>
         <div class="slide4__container">
-            <div v-for="(work, i) in works" :key="i" :style="`background-image:url('${work.img}')`">
+            <div class="slide4__box" v-for="(work, i) in works" :key="i" :style="`background-image:url('${work.img}')`">
                 <h4 class="slide4__title">{{ work.title }}</h4>
                 <p class="slide4__doc">{{work.doc}}</p>
             </div>
@@ -11,6 +11,7 @@
 
 <script>
 import BaseSlidePage from '../BaseSlidePage.vue'
+import gsap from 'gsap'
 
 export default {
   name: 'Slide4',
@@ -98,7 +99,28 @@ export default {
         ]
     }
   },
+  props: {
+    addEventScroll: {
+      type: Function,
+      default: null,
+    },
+    removeEventScroll: {
+      type: Function,
+      default: null,
+    }
+  },
   mounted() {
+    if (this.addEventScroll!==null && this.removeEventScroll!==null) {
+      this.addEventScroll('slide4', (rect) => {
+        let left =  this.$el.getBoundingClientRect().left - rect.left
+        let earlyStartPixcel = window.innerWidth
+        console.log(left - earlyStartPixcel);
+        if ( left - earlyStartPixcel < 0 ) {
+            gsap.from('.slide4__box', {duration: 2, ease: 'Linear.easeNone', opacity: 0, rotation: 360, scale: 0 })
+            this.removeEventScroll('slide4')
+        }
+      })
+    }
   },
 }
 </script>

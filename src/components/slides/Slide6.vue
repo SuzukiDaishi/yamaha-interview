@@ -31,11 +31,36 @@
 
 <script>
 import BaseSlidePage from '../BaseSlidePage.vue'
+import gsap from 'gsap'
 
 export default {
   name: 'Slide6',
   components: {
     BaseSlidePage,
+  },
+  props: {
+    addEventScroll: {
+      type: Function,
+      default: null,
+    },
+    removeEventScroll: {
+      type: Function,
+      default: null,
+    }
+  },
+  mounted() {
+    if (this.addEventScroll!==null && this.removeEventScroll!==null) {
+      this.addEventScroll('slide6', (rect) => {
+        let left =  this.$el.getBoundingClientRect().left - rect.left
+        let earlyStartPixcel = window.innerWidth
+        console.log(left - earlyStartPixcel);
+        if ( left - earlyStartPixcel < 0 ) {
+            gsap.from('.slide6__list', {duration: 2.5, ease: 'Power1.easeOut', y: 1000 })
+            gsap.from('.slide6__img', {duration: 2.5, ease: 'Power1.easeOut', x: 3000 })
+            this.removeEventScroll('slide6')
+        }
+      })
+    }
   },
 }
 </script>

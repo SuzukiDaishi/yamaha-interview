@@ -13,8 +13,28 @@ export default {
   components: {
     BaseSlideCenter
   },
+  props: {
+    addEventScroll: {
+      type: Function,
+      default: null,
+    },
+    removeEventScroll: {
+      type: Function,
+      default: null,
+    }
+  },
   mounted() {
-    gsap.from('.slide3__title', {duration: 2.5, ease: 'bounce.out', opacity: 0, y: -300})
+    if (this.addEventScroll!==null && this.removeEventScroll!==null) {
+      this.addEventScroll('slide3', (rect) => {
+        let left =  this.$el.getBoundingClientRect().left - rect.left
+        let earlyStartPixcel = window.innerWidth
+        console.log(left - earlyStartPixcel);
+        if ( left - earlyStartPixcel < 0 ) {
+          gsap.from('.slide3__title', {duration: 2, ease: 'Power1.easeInOut', opacity: 0, x: 300})
+          this.removeEventScroll('slide3')
+        }
+      })
+    }
   },
 }
 </script>

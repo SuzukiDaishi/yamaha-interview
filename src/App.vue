@@ -3,13 +3,13 @@
     <vue-scroll-snap id="scrollWrapper" :fullscreen="true" :horizontal="true">
       <Slide1 class="item" />
       <Slide2 class="item" :addEventScroll="addEventScroll" :removeEventScroll="removeEventScroll"/>
-      <Slide3 class="item" />
-      <Slide4 class="item"/>
-      <Slide5 class="item"/>
-      <Slide6 class="item"/>
-      <Slide7 class="item"/>
-      <Slide8 class="item"/>
-      <Slide9 class="item"/>
+      <Slide3 class="item" :addEventScroll="addEventScroll" :removeEventScroll="removeEventScroll"/>
+      <Slide4 class="item" :addEventScroll="addEventScroll" :removeEventScroll="removeEventScroll"/>
+      <Slide5 class="item" :addEventScroll="addEventScroll" :removeEventScroll="removeEventScroll"/>
+      <Slide6 class="item" :addEventScroll="addEventScroll" :removeEventScroll="removeEventScroll"/>
+      <Slide7 class="item" :addEventScroll="addEventScroll" :removeEventScroll="removeEventScroll"/>
+      <Slide8 class="item" :addEventScroll="addEventScroll" :removeEventScroll="removeEventScroll"/>
+      <Slide9 class="item" :addEventScroll="addEventScroll" :removeEventScroll="removeEventScroll"/>
     </vue-scroll-snap>
   </div>
 </template>

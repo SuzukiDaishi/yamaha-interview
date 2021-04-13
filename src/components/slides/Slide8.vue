@@ -9,10 +9,35 @@
 
 <script>
 import BaseSlideCenter from '../BaseSlideCenter.vue'
+import gsap from 'gsap'
+
 export default {
   name: 'Slide8',
   components: {
     BaseSlideCenter,
+  },
+  props: {
+    addEventScroll: {
+      type: Function,
+      default: null,
+    },
+    removeEventScroll: {
+      type: Function,
+      default: null,
+    }
+  },
+  mounted() {
+    if (this.addEventScroll!==null && this.removeEventScroll!==null) {
+      this.addEventScroll('slide8', (rect) => {
+        let left =  this.$el.getBoundingClientRect().left - rect.left
+        let earlyStartPixcel = window.innerWidth
+        console.log(left - earlyStartPixcel);
+        if ( left - earlyStartPixcel < 0 ) {
+            gsap.from('.slide8__title', {duration: 2.5, ease: 'Power1.easeOut', opacity: 0, scale: 0  })
+            this.removeEventScroll('slide8')
+        }
+      })
+    }
   },
 }
 </script>

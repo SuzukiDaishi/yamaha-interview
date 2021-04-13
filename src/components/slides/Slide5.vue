@@ -16,11 +16,35 @@
 
 <script>
 import BaseSlidePage from '../BaseSlidePage.vue'
+import gsap from 'gsap'
 
 export default {
   name: 'Slide5',
   components: {
     BaseSlidePage,
+  },
+  props: {
+    addEventScroll: {
+      type: Function,
+      default: null,
+    },
+    removeEventScroll: {
+      type: Function,
+      default: null,
+    }
+  },
+  mounted() {
+    if (this.addEventScroll!==null && this.removeEventScroll!==null) {
+      this.addEventScroll('slide5', (rect) => {
+        let left =  this.$el.getBoundingClientRect().left - rect.left
+        let earlyStartPixcel = window.innerWidth
+        console.log(left - earlyStartPixcel);
+        if ( left - earlyStartPixcel < 0 ) {
+            gsap.from('.slide5__img', {duration: 2, ease: 'Linear.easeNone', opacity: 0, scale: 0 })
+            this.removeEventScroll('slide5')
+        }
+      })
+    }
   },
 }
 </script>
