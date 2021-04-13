@@ -1,20 +1,20 @@
 <template>
   <BaseSlideCenter class="slide8__bg-color">
     <div class="slide9__title">
-        <span class="slide9__c1">ご</span>
-        <span class="slide9__c2">静</span>
-        <span class="slide9__c3">聴</span>
-        <span class="slide9__c4">あ</span>
-        <span class="slide9__c5">り</span>
-        <span class="slide9__c6">が</span>
-        <span class="slide9__c7">と</span>
-        <span class="slide9__c8">う</span>
-        <span class="slide9__c9">ご</span>
-        <span class="slide9__c10">ざ</span>
+        <span class="slide9__c1">本</span>
+        <span class="slide9__c2">日</span>
+        <span class="slide9__c3">は</span>
+        <span class="slide9__c4">よ</span>
+        <span class="slide9__c5">ろ</span>
+        <span class="slide9__c6">し</span>
+        <span class="slide9__c7">く</span>
+        <span class="slide9__c8">お</span>
+        <span class="slide9__c9">ね</span>
+        <span class="slide9__c10">が</span>
         <span class="slide9__c11">い</span>
-        <span class="slide9__c12">ま</span>
-        <span class="slide9__c13">し</span>
-        <span class="slide9__c14">た</span>
+        <span class="slide9__c12">し</span>
+        <span class="slide9__c13">ま</span>
+        <span class="slide9__c14">す</span>
     </div>
   </BaseSlideCenter>
 </template>
